@@ -37,6 +37,20 @@ class LoginTests extends BaseTest {
     }
 
     @Test
+    void shouldShowErrorWhenPasswordIsMissing() {
+        LoginPage loginPage = new LoginPage(driver)
+                .open(ConfigLoader.getBaseUrl());
+
+
+        loginPage.login(TestUsers.STANDARD_USER, "");
+
+        assertTrue(loginPage.isErrorVisible(), "Error message should be visible");
+        assertTrue(
+                loginPage.getErrorMessage().contains("Password is required"),
+                "Expected password-required error message");
+    }
+
+    @Test
     void shouldShowErrorWhenUsernameLockedOut() {
         LoginPage loginPage = new LoginPage(driver)
                 .open(ConfigLoader.getBaseUrl());
