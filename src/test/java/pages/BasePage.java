@@ -21,4 +21,11 @@ public abstract class BasePage {
     protected WebElement waitVisible(By locator) {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
+
+    protected void click(By locator) {
+        wait.until(
+                org.openqa.selenium.support.ui.ExpectedConditions
+                        .elementToBeClickable(locator)
+        ).click();
+    }
 }
