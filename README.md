@@ -42,6 +42,11 @@ Aplikacja testowana: https://www.saucedemo.com/
 - Dodanie produktu do koszyka
 - Usunięcie produktu z koszyka
 
+### Checkout
+- Poprawne przejście przez Checkout Step One → Summary
+- Walidacja formularza Checkout (brak First Name)
+
+
 > Testy zostały ustabilizowane poprzez:
 > - synchronizację opartą o warunki biznesowe,
 > - eliminację flaky behavior,
@@ -89,6 +94,8 @@ Przykładowe Page Objecty:
 - `LoginPage`
 - `InventoryPage`
 - `CartPage`
+- `CheckoutStepOnePage`
+- `CheckoutStepTwoPage`
 
 ---
 
@@ -115,6 +122,6 @@ mvn test -Dheadless=true
 W projekcie zastosowano m.in.:
 
 - własne helpery `click()` i `waitVisible()`,
-- synchronizację opartą o warunki biznesowe (np. oczekiwanie na znikanie elementów),
+- synchronizację opartą o warunki biznesowe (np. oczekiwanie na pojawienie się lub znikanie elementów),
 - eliminację stałych opóźnień (`Thread.sleep`),
 - uruchamianie Chrome na czystym, tymczasowym profilu testowym w celu uniknięcia popupów przeglądarki (np. password manager).
