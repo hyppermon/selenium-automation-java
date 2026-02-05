@@ -28,4 +28,10 @@ public abstract class BasePage {
                         .elementToBeClickable(locator)
         ).click();
     }
+
+    protected void type(By locator, String text) {
+        var el = waitVisible(locator);
+        el.clear();
+        el.sendKeys(text);
+    }
 }

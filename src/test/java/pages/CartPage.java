@@ -26,4 +26,12 @@ public class CartPage extends BasePage {
         click(removeBackpackBtn);
         wait.until(driver -> driver.findElements(removeBackpackBtn).isEmpty());
     }
+
+    private final By checkoutButton = By.cssSelector("[data-test='checkout']");
+
+    public CheckoutStepOnePage checkout() {
+        click(checkoutButton);
+        return new CheckoutStepOnePage(driver);
+    }
+
 }
