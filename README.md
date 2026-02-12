@@ -69,7 +69,7 @@ src/
       └─ config.properties
 ```
 ---
-
+  
 ## 🧱 Podejście obiektowe
 
 Projekt został zaprojektowany zgodnie z zasadami programowania obiektowego:

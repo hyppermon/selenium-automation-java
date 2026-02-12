@@ -42,6 +42,5 @@ public class LoginPage extends BasePage {
         login(username, password);
         return new InventoryPage(driver);
     }
-
 }
 

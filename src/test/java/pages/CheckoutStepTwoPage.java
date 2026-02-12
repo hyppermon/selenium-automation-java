@@ -14,4 +14,11 @@ public class CheckoutStepTwoPage extends BasePage {
     public boolean isLoaded() {
         return waitVisible(summaryContainer).isDisplayed();
     }
+
+    private final By finishButton = By.cssSelector("[data-test='finish']");
+
+    public CheckoutCompletePage finish() {
+        click(finishButton);
+        return new CheckoutCompletePage(driver);
+    }
 }

@@ -33,5 +33,4 @@ public class CartPage extends BasePage {
         click(checkoutButton);
         return new CheckoutStepOnePage(driver);
     }
-
 }

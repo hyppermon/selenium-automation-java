@@ -48,6 +48,5 @@ class CheckoutTests extends BaseTest {
                 "Expected first-name-required validation message"
         );
     }
-
 }
 

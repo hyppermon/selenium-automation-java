@@ -1,7 +1,5 @@
 package testdata;
 
-import org.junit.jupiter.api.Test;
-
 public final class TestUsers {
     private TestUsers(){}
 
