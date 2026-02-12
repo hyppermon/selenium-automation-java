@@ -46,6 +46,10 @@ Aplikacja testowana: https://www.saucedemo.com/
 - Poprawne przejście przez Checkout Step One → Summary
 - Walidacja formularza Checkout (brak First Name)
 
+### E2E
+- Pełny flow zakupowy: Login → Cart → Checkout → Complete
+- Weryfikacja komunikatu: "Thank you for your order!"
+
 
 > Testy zostały ustabilizowane poprzez:
 > - synchronizację opartą o warunki biznesowe,
